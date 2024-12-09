@@ -19,6 +19,12 @@ with app.app_context():
 from routes.user_routes import user_bp
 app.register_blueprint(user_bp)
 
+from routes.tasks import bp as tasks_bp
+app.register_blueprint(tasks_bp)
+
+from routes.intentions import bp as intentions_bp
+app.register_blueprint(intentions_bp)
+
 # define routes
 
 @app.route('/')
